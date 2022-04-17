@@ -1,0 +1,47 @@
+<!-- Page content-->
+  
+<table class="table">
+    <thead class="thead-light">
+        <tr>
+            <th>Match ID</th>
+            <th>Team 1</th>
+            <th>Team 2</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Score</th>
+            <th>Instant bet</th>
+            <th>Claim</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let match of matchList">
+            <td ><a href = "http://localhost:4200/matches/view-match/{{match.matchId}}">{{match.matchId}}</a></td>
+            <td ><a href = "http://localhost:4200/matches/">{{ match.team1 }} <img src = "{{ match.img1 }}"></a></td>
+            <td><a routerLink = "matches/match.id">{{ match.team2 }} <img src = "{{ match.img2 }}"></a></td>
+            <td>{{ match.date }}</td>
+            <td>{{ match.time }}</td>
+            <td>{{ match.score }}</td>
+            <td><div class="btn-group" role="group" aria-label="Basic example">
+                <button id = "groupbtn" type="button" class="btn btn-secondary">1</button>
+                <button id = "groupbtn" type="button" class="btn btn-secondary">X</button>
+                <button id = "groupbtn" type="button" class="btn btn-secondary">2</button>
+                </div></td>
+            <td>
+                <button type="button" class="btn btn-success">Claim</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+</div>
+
